@@ -6,17 +6,9 @@
 export default {
   components: {},
   async mounted() {
-    const response = await fetch(
-      "https://629915c87b866a90ec368b06.mockapi.io/api/employee",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-      }
-    );
-    console.log(await response.json());
+    this.$store.dispatch({
+      type: "getEmployees",
+    });
   },
 };
 </script>

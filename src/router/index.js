@@ -8,14 +8,14 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/employees',
-    name: 'employees',
-    component: () => import('../views/Employees.vue')
+    path: '/places',
+    name: 'places',
+    component: () => import('../views/Places.vue')
   },
   {
-    path: '/employees/:id',
-    name: 'employee',
-    component: () => import('../views/Employee.vue')
+    path: '/places/:id',
+    name: 'place',
+    component: () => import('../views/Place.vue')
   }
 ]
 

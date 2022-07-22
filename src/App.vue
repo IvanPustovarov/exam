@@ -5,7 +5,19 @@
         <img src="@/assets/logo.png" alt="logo" class="logo" />
       </div>
       <router-link to="/" class="link"> Home </router-link>
-      <router-link to="/places" class="link"> Places </router-link>
+      <div class="choose">
+        <select v-model="selected">
+          <option disabled value="">Выберите один из вариантов</option>
+          <option value="eurasia">Евразия</option>
+          <option value="islands">Острова и островные государства</option>
+          <option value="africa">Африка</option>
+          <option value="north-america">Северная Америка</option>
+          <option value="antarctica">Антарктида</option>
+          <option value="south-america">Южная Америка</option>
+          <option value="australia">Австралия и океания</option>
+        </select>
+      </div>
+      <!-- <router-link to="/places" class="link"> Places </router-link> -->
     </div>
   </header>
   <router-view />
@@ -15,16 +27,27 @@
 <script>
 export default {
   components: {},
+  data() {
+    return {
+      selected: "",
+    };
+  },
   async mounted() {
     this.$store.dispatch({
       type: "getPlaces",
     });
+  },
+  watch: {
+    selected() {
+      this.$router.push(`/sections/${this.selected}`);
+    },
   },
   methods: {
     goToHome() {
       this.$router.push("/");
     },
   },
+  computed: {},
 };
 </script>
 
@@ -87,6 +110,11 @@ img {
     font-size: 1.3rem;
     margin-left: 1rem;
     color: rgb(29, 29, 45);
+  }
+  .choose {
+    select {
+      width: 15rem;
+    }
   }
 }
 

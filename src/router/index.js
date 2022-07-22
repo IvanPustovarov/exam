@@ -16,6 +16,11 @@ const routes = [
     path: '/places/:id',
     name: 'place',
     component: () => import('../views/Place.vue')
+  },
+  {
+    path: '/sections/:id',
+    name: 'section',
+    component: () => import('../views/Section.vue')
   }
 ]
 

@@ -1,5 +1,27 @@
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <h1>The most ******* places in the world</h1>
+    <p class="description">
+      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
+      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
+      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+    </p>
+    <p class="description">
+      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
+      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
+      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+    </p>
+    <p class="description">
+      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
+      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
+      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+    </p>
+    <p class="description">
+      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
+      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
+      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+    </p>
+  </div>
 </template>
 
 <script>
@@ -23,8 +45,8 @@ export default {
 </script>
 
 <style scored lang="scss">
-.random-employee {
-  cursor: pointer;
-  color: aqua;
+.description {
+  width: 300px;
+  margin: 1rem 0 0 1rem;
 }
 </style>

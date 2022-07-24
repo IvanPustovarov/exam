@@ -10,11 +10,11 @@
     </div>
   </header>
   <router-view />
-  <footer><div class="footer">Footer</div></footer>
+  <footer><div class="footer"></div></footer>
 </template>
 
 <script>
-import CustomSelect from "./components/CustomSelect.vue";
+import CustomSelect from "@/components/CustomSelect.vue";
 export default {
   components: {
     CustomSelect,
@@ -51,6 +51,14 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Coves";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Coves"), url("./fonts/Coves/Coves-Bold.otf") format("otf"),
+    url("./fonts/Coves/Coves-Light.otf") format("otf");
+}
 *,
 *:after,
 *:before {
@@ -58,6 +66,7 @@ export default {
   padding: 0;
   margin: 0;
   transition: 0.2s ease-in-out;
+  font-family: "Coves";
 }
 ul {
   list-style: none;
@@ -80,11 +89,10 @@ h6 {
   letter-spacing: 1px;
 }
 body {
-  font-family: "Open Sans", arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
-  color: #373737;
-  background: linear-gradient(rgb(134, 134, 175), rgb(187, 205, 166));
+  color: #d5d4d4;
+  background: linear-gradient(to right, #2b5876, #4e4376);
   display: flex;
   flex-direction: column;
   height: 100vh;

@@ -1,9 +1,14 @@
 <template>
   <div class="container">
     <h1>{{ section.name }}</h1>
-    <p class="description">{{ section.description }}</p>
-    <div :style="{ marginBottom: 1 + 'rem' }">
-      Страны и города относящиеся к {{ section.name }}:
+    <div class="description-logo">
+      <p class="description">{{ section.description }}</p>
+      <div class="logo">
+        <img :src="renderedSvg" alt="logo" />
+      </div>
+    </div>
+    <div :style="{ marginBottom: 1 + 'rem', fontSize: 18 + 'px' }">
+      {{ section.name }}. Страны, города и места:
     </div>
     <div class="countries">
       <div
@@ -19,10 +24,33 @@
 </template>
 
 <script>
+import eurasia from "@/assets/eurasia.svg";
+import africa from "@/assets/africa.svg";
+import antarctica from "@/assets/antarctica.svg";
+import australia from "@/assets/australia.svg";
+import islands from "@/assets/islands.svg";
+import north_america from "@/assets/north_america.svg";
+import south_america from "@/assets/south_america.svg";
 export default {
   name: "SectionComponent",
+  setup() {
+    let earthProections = {
+      eurasia,
+      africa,
+      antarctica,
+      australia,
+      islands,
+      north_america,
+      south_america,
+    };
+    return {
+      earthProections,
+    };
+  },
   components: {},
-  mounted() {},
+  mounted() {
+    this.renderedSvg = this.earthProections[this.sectionId];
+  },
   computed: {
     sectionId() {
       return this.$route.params.id;
@@ -38,6 +66,16 @@ export default {
       );
     },
   },
+  watch: {
+    sectionId(value) {
+      this.renderedSvg = this.earthProections[value];
+    },
+  },
+  data() {
+    return {
+      renderedSvg: null,
+    };
+  },
   methods: {
     goToCountry(value) {
       this.$router.push(`/country/${value.value}`);
@@ -47,16 +85,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.description {
-  margin: 1rem 0 1rem 0;
-  width: 30rem;
+.description-logo {
+  display: flex;
+  flex-direction: row;
+  .description {
+    margin: 1rem 0 1rem 1rem;
+    width: 35rem;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .logo {
+    width: 25rem;
+  }
 }
 .countries {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   .country {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    margin: 0 0.5rem 0.5rem;
+    padding: 0.4rem;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 18px;
+    height: 1.3rem;
+  }
+  .country:hover {
+    background-color: rgb(19, 43, 116);
   }
 }
 </style>

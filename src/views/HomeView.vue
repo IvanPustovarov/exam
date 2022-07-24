@@ -42,7 +42,8 @@ export default {
 
 <style scored lang="scss">
 .description {
-  width: 300px;
+  width: 35rem;
+  font-size: 18px;
   margin: 1rem 0 0 1rem;
 }
 </style>

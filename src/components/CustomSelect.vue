@@ -54,7 +54,7 @@ export default {
   height: 2rem;
   line-height: 2rem;
   .selected {
-    background-color: #89a8b9;
+    background-color: #597f94;
     border-radius: 6px;
     border: 1px solid #bebfc0;
     color: #fff;

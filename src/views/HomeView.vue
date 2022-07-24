@@ -1,25 +1,21 @@
 <template>
   <div class="container">
-    <h1>The most ******* places in the world</h1>
+    <h1>The most attractive places in the world</h1>
     <p class="description">
-      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
-      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
-      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+      Этот сайт - для тех, кто мечтает объехать весь мир. Для тех, кто не может
+      представить жизнь без путешествий.
     </p>
     <p class="description">
-      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
-      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
-      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+      На этой странице вас ждут самые необычные, удивительные, красивые -
+      словом, те места нашей планеты, которые обязательно нужно увидеть хотя бы
+      раз в своей жизни. Увлекательные тексты помогут вам отправиться в
+      путешествие по миру, а красочные фотографии - почувствовать атмосферу
+      каждого из 1000 лучших мест нашей планеты.
     </p>
     <p class="description">
-      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
-      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
-      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
-    </p>
-    <p class="description">
-      sfksldfksldfkl klsdkflsdkfl ksdklfksl kdflksldfksldfkls k kfsldkf sldfk
-      lsd fk lsdfksl dfk lsldfkkl sdf sfksldfksldfkl klsdkflsdkfl ksdklfksl
-      kdflksldfksldfkls k kfsldkf sldfk lsd fk lsdfksl dfk lsldfkkl sdf
+      Все места удобно сгруппированы по континентам и странам - вы сможете с
+      легкостью спланировать свой отпуск. Отправьтесь в незабываемое
+      путешествие!
     </p>
   </div>
 </template>

@@ -5,19 +5,7 @@
         <img src="@/assets/logo.png" alt="logo" class="logo" />
       </div>
       <router-link to="/" class="link"> Home </router-link>
-      <div class="choose">
-        <select v-model="selected">
-          <option disabled value="">Выберите один из вариантов</option>
-          <option value="eurasia">Евразия</option>
-          <option value="islands">Острова и островные государства</option>
-          <option value="africa">Африка</option>
-          <option value="north-america">Северная Америка</option>
-          <option value="antarctica">Антарктида</option>
-          <option value="south-america">Южная Америка</option>
-          <option value="australia">Австралия и океания</option>
-        </select>
-      </div>
-      <!-- <router-link to="/places" class="link"> Places </router-link> -->
+      <CustomSelect :options="options" @input="inputOption($event)" />
     </div>
   </header>
   <router-view />
@@ -25,8 +13,11 @@
 </template>
 
 <script>
+import CustomSelect from "./components/CustomSelect.vue";
 export default {
-  components: {},
+  components: {
+    CustomSelect,
+  },
   data() {
     return {
       selected: "",
@@ -46,8 +37,15 @@ export default {
     goToHome() {
       this.$router.push("/");
     },
+    inputOption(option) {
+      this.selected = option;
+    },
   },
-  computed: {},
+  computed: {
+    options() {
+      return this.$store.state.options;
+    },
+  },
 };
 </script>
 
@@ -85,7 +83,10 @@ body {
   font-size: 14px;
   line-height: 1;
   color: #373737;
-  background: #b49f9f;
+  background: linear-gradient(rgb(134, 134, 175), rgb(187, 205, 166));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 img {
   width: 100%;
@@ -101,7 +102,6 @@ img {
 .header {
   display: flex;
   margin: 1rem;
-  background-color: rgb(80, 106, 161);
   .logotype {
     width: 100px;
     cursor: pointer;
@@ -113,7 +113,12 @@ img {
   }
   .choose {
     select {
+      height: 1.5rem;
       width: 15rem;
+      option {
+        font-size: 16px;
+        padding: 10px;
+      }
     }
   }
 }

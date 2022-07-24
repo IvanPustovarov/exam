@@ -54,16 +54,16 @@ export default {
   height: 2rem;
   line-height: 2rem;
   .selected {
-    background-color: #0a0a0a;
+    background-color: #89a8b9;
     border-radius: 6px;
-    border: 1px solid #666666;
+    border: 1px solid #bebfc0;
     color: #fff;
     padding-left: 1em;
     cursor: pointer;
     user-select: none;
   }
   .selected.open {
-    border: 1px solid #ad8225;
+    border: 1px solid #80a8e8;
     border-radius: 6px 6px 0px 0px;
   }
   .selected:after {
@@ -80,11 +80,11 @@ export default {
     color: #fff;
     border-radius: 0px 0px 6px 6px;
     overflow: hidden;
-    border-right: 1px solid #ad8225;
-    border-left: 1px solid #ad8225;
-    border-bottom: 1px solid #ad8225;
+    border-right: 1px solid #80a8e8;
+    border-left: 1px solid #80a8e8;
+    border-bottom: 1px solid #80a8e8;
     position: absolute;
-    background-color: #0a0a0a;
+    background-color: #7b97a6;
     left: 0;
     right: 0;
     z-index: 1;
@@ -95,7 +95,7 @@ export default {
       user-select: none;
     }
     div:hover {
-      background-color: #ad8225;
+      background-color: #7fbea9;
     }
   }
   .selectHide {

@@ -20,7 +20,12 @@ const routes = [
   {
     path: '/sections/:id',
     name: 'section',
-    component: () => import('../views/Section.vue')
+    component: () => import('../views/Section.vue'),
+  },
+  {
+    path: '/country/:id',
+    name: 'country',
+    component: () => import('../views/Country.vue'),
   }
 ]
 

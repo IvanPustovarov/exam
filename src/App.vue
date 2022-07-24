@@ -4,8 +4,9 @@
       <div class="logotype" @click="goToHome">
         <img src="@/assets/logo.png" alt="logo" class="logo" />
       </div>
-      <router-link to="/" class="link"> Home </router-link>
-      <CustomSelect :options="options" @input="inputOption($event)" />
+      <div class="select">
+        <CustomSelect :options="options" @input="inputOption($event)" />
+      </div>
     </div>
   </header>
   <router-view />
@@ -111,15 +112,8 @@ img {
     margin-left: 1rem;
     color: rgb(29, 29, 45);
   }
-  .choose {
-    select {
-      height: 1.5rem;
-      width: 15rem;
-      option {
-        font-size: 16px;
-        padding: 10px;
-      }
-    }
+  .select {
+    margin: 2rem 0 0 1rem;
   }
 }
 

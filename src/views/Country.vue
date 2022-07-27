@@ -1,13 +1,14 @@
 <template>
   <div class="container">
     <h1 class="country">{{ country.name }}</h1>
-
-    <PlaceLocalComponent
-      :place="place"
-      v-for="place in places"
-      :key="place.id"
-      @click="goToPlace(place)"
-    />
+    <div class="places">
+      <PlaceLocalComponent
+        :place="place"
+        v-for="place in places"
+        :key="place.id"
+        @click="goToPlace(place)"
+      />
+    </div>
   </div>
 </template>
 
@@ -45,5 +46,10 @@ export default {
 <style lang="scss" scoped>
 .country {
   margin: 1rem 1rem 1rem 0;
+}
+.places {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>

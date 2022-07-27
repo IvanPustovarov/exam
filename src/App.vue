@@ -31,11 +31,14 @@ export default {
   },
   watch: {
     selected() {
-      this.$router.push(`/sections/${this.selected}`);
+      if (this.selected != null) {
+        this.$router.push(`/sections/${this.selected}`);
+      }
     },
   },
   methods: {
     goToHome() {
+      this.selected = null;
       this.$router.push("/");
     },
     inputOption(option) {

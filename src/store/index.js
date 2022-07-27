@@ -129,7 +129,56 @@ export default createStore({
     {name: "Остров Ява", value: "java-island", mainland: "islands"}, {name: "Филипины", value: "philippines", mainland: "islands"}, 
     {name: "Маврикий, Cейшельские острова и остров Реюньон", value: "mauritius-and-seychelles-and-reunion-island", mainland: "islands"}, 
     {name: "Мадагаскар", value: "madagascar", mainland: "islands"}, {name: "Острова Карибского бассейна", value: "caribbean-islands", mainland: "islands"},
-    {name: "Куба", value: "Cuba", mainland: "islands"}, {name: "Ямайка", value: "jamaica", mainland: "islands"}, {name: "Островные государства Тихого океана", value: "pacific-islands", mainland: "islands"}, ]
+    {name: "Куба", value: "Cuba", mainland: "islands"}, {name: "Ямайка", value: "jamaica", mainland: "islands"}, {name: "Островные государства Тихого океана", value: "pacific-islands", mainland: "islands"}, ],
+    placesLocal: [
+   {
+      name: "Страна муми-троллей", 
+      description: `Уже не одно поколение детей выросло на сказках Туве Янссон. Увидеть, как живут волшебные
+      персонажи, можно, посетив один из лучших детских тематических парков мира - Долину Муми-троллей. Парк работает в летние месяцы, дети и взрослые могут
+      побывать в доме-музее, где обитает муми-семья, увидеть театрализованные представления, почитать местную газету и сфотографироваться на память с любимыми
+      героями.`, 
+      id: "1", 
+      picture: "https://fs.tonkosti.ru/7l/z8/7lz83it58swscs0kw0g4ogoco.jpg", 
+      northern: `60.2823`, 
+      eastern: `22.0017`, 
+      country: "finland", 
+      area: "", 
+      time: "GMT+3", 
+      population: "", 
+      language: "finnish"
+   },
+   {
+      name: "Лапландия", 
+      description: `Поездка в Лапландию - сказка, которая не оставил равнодушным ни детей, ни взрослых. Отправляясь в путешествие на Новый год, можно посетить
+      деревню Санта-Клауса, покататься на санях, запряженных оленями или собаками хаски, отослать открытки близким прямо с полярного круга и отправится на
+      сафари в дикий лапландский лес. Отдельно стоит отметить и гастрономические изыски: только здесь можно попробовать мясо северного оленя и снежной куропатки, а
+      также десерт из морошки`, 
+      id: "2", 
+      picture: "https://upload.wikimedia.org/wikipedia/commons/5/57/LocationSapmi.png", 
+      northern: ``, 
+      eastern: ``, 
+      country: "finland", 
+      area: "", 
+      time: "GMT+3", 
+      population: "", 
+      language: "finnish"
+   },
+   {
+      name: "Крепость Суоменлинна", 
+      description: `Морская крепость Суоменлина, построенная в XVIII веке, считается одной из крупнейших в мире и располагается на восьми островах вдоль
+      побережья Хельсинки. Приехав летом, туристы могут увидеть сохранившиеся бастионы, туннели и подземелья, побывать в нескольких тематических музеях, а 
+      после - насладится прогулкой по скалам, искупаться в море и провести вечер за бокалом пива из местной пивоварни`, 
+      id: "3", 
+      picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Suomenlinna.jpg/1280px-Suomenlinna.jpg", 
+      northern: `60.0853`, 
+      eastern: `24.5911`, 
+      country: "finland", 
+      area: "", 
+      time: "GMT+3", 
+      population: "", 
+      language: "finnish"
+    }
+  ]
   },
   getters: {
   },

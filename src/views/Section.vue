@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-if="isCountry">
+  <div class="container" v-if="!isCountry">
     <h1>{{ section.name }}</h1>
     <div class="description-logo">
       <p class="description">{{ section.description }}</p>
@@ -75,7 +75,7 @@ export default {
   data() {
     return {
       renderedSvg: null,
-      isCountry: true,
+      isCountry: false,
     };
   },
   methods: {

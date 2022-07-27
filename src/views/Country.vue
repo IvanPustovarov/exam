@@ -11,7 +11,7 @@ export default {
   mounted() {},
   computed: {
     countryId() {
-      return this.$route.params.id;
+      return this.$route.params.first_id;
     },
     country() {
       return this.$store.state.countries.find(

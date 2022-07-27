@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const routes = [
   {
@@ -10,23 +10,25 @@ const routes = [
   {
     path: '/places',
     name: 'places',
-    component: () => import('../views/Places.vue')
+    component: () => import('@/views/Places.vue')
   },
   {
     path: '/places/:id',
     name: 'place',
-    component: () => import('../views/Place.vue')
+    component: () => import('@/views/Place.vue')
   },
   {
     path: '/sections/:id',
     name: 'section',
-    component: () => import('../views/Section.vue'),
+    component: () => import('@/views/Section.vue'),
+    children: [
+      {
+        path: ':first_id',
+        name: 'country',
+        component: () => import('@/views/Country.vue'),
+      },
+    ],
   },
-  {
-    path: '/country/:id',
-    name: 'country',
-    component: () => import('../views/Country.vue'),
-  }
 ]
 
 const router = createRouter({

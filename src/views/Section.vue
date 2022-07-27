@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="isCountry">
     <h1>{{ section.name }}</h1>
     <div class="description-logo">
       <p class="description">{{ section.description }}</p>
@@ -21,6 +21,7 @@
       </div>
     </div>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -74,11 +75,13 @@ export default {
   data() {
     return {
       renderedSvg: null,
+      isCountry: true,
     };
   },
   methods: {
     goToCountry(value) {
-      this.$router.push(`/country/${value.value}`);
+      this.isCountry = !this.isCountry;
+      this.$router.push(`${this.$route.params.id}/${value.value}`);
     },
   },
 };

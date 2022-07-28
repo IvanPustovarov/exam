@@ -2,7 +2,9 @@
   <div class="container" v-if="!isCountry">
     <h1>{{ section.name }}</h1>
     <div class="description-logo">
-      <p class="description">{{ section.description }}</p>
+      <div class="description">
+        <p>{{ section.description }}</p>
+      </div>
       <div class="logo">
         <img :src="renderedSvg" alt="logo" />
       </div>
@@ -92,10 +94,15 @@ export default {
   display: flex;
   flex-direction: row;
   .description {
-    margin: 1rem 0 1rem 1rem;
+    margin: 1rem 5rem 1rem 1rem;
     width: 35rem;
     font-weight: 500;
     font-size: 18px;
+    p {
+      padding: 1rem;
+      background-color: rgba(100, 117, 184, 0.5);
+      border-radius: 5px;
+    }
   }
   .logo {
     width: 25rem;

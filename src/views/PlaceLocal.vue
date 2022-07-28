@@ -1,5 +1,6 @@
 <template>
   <div class="place">
+    <div class="description">{{ place.description }}</div>
     <div class="picture">
       <img :src="place.picture" alt="" />
     </div>
@@ -28,7 +29,8 @@ export default {
 <style lang="scss" scoped>
 .place {
   cursor: pointer;
-  outline: 2px solid white;
+  outline: 1px solid white;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -50,6 +52,37 @@ export default {
     font-size: 20px;
     color: rgb(255, 255, 255);
     font-weight: 900;
+  }
+  .description {
+    outline: 1px solid white;
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border-radius: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 18px;
+    margin: 0;
+    background: linear-gradient(to right, #445f71, #1c356a);
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    -webkit-transition: height 0.5s, background-color 0.5s,
+      -webkit-transform 0.5s;
+    transition: height 0.5s, background-color 0.5s, transform 0.5s;
+  }
+
+  .description::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.place:hover {
+  outline: none;
+  .description {
+    width: 20rem;
+    height: 12rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
 }
 </style>

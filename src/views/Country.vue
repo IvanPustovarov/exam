@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="!isPlace">
     <h1 class="country">{{ country.name }}</h1>
     <div class="places">
       <PlaceLocalComponent
@@ -10,6 +10,7 @@
       />
     </div>
   </div>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -18,6 +19,11 @@ export default {
   name: "CountryComponent",
   components: {
     PlaceLocalComponent,
+  },
+  data() {
+    return {
+      isPlace: false,
+    };
   },
   mounted() {},
   computed: {
@@ -37,7 +43,8 @@ export default {
   },
   methods: {
     goToPlace(place) {
-      console.log(place);
+      this.isPlace = !this.isPlace;
+      this.$router.push(`${this.$route.params.first_id}/${place.id}`);
     },
   },
 };

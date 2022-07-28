@@ -26,6 +26,13 @@ const routes = [
         path: ':first_id',
         name: 'country',
         component: () => import('@/views/Country.vue'),
+        children: [
+          {
+            path: ':second_id',
+            name: 'plcae',
+            component: () => import('@/views/PlaceDetail.vue'),
+          }
+        ]
       },
     ],
   },

@@ -48,7 +48,6 @@ export default {
       earthProections,
     };
   },
-  components: {},
   mounted() {
     this.renderedSvg = this.earthProections[this.sectionId];
   },

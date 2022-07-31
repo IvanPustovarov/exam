@@ -1,21 +1,14 @@
 <template>
   <div class="container">
-    <h1>The most attractive places in the world</h1>
+    <h1>{{ description.homeName }}</h1>
     <p class="description">
-      Этот сайт - для тех, кто мечтает объехать весь мир. Для тех, кто не может
-      представить жизнь без путешествий.
+      {{ description.homeParagraph1 }}
     </p>
     <p class="description">
-      На этой странице вас ждут самые необычные, удивительные, красивые -
-      словом, те места нашей планеты, которые обязательно нужно увидеть хотя бы
-      раз в своей жизни. Увлекательные тексты помогут вам отправиться в
-      путешествие по миру, а красочные фотографии - почувствовать атмосферу
-      каждого из 1000 лучших мест нашей планеты.
+      {{ description.homeParagraph2 }}
     </p>
     <p class="description">
-      Все места удобно сгруппированы по континентам и странам - вы сможете с
-      легкостью спланировать свой отпуск. Отправьтесь в незабываемое
-      путешествие!
+      {{ description.homeParagraph3 }}
     </p>
   </div>
 </template>
@@ -27,6 +20,9 @@ export default {
   computed: {
     places() {
       return this.$store.state.places;
+    },
+    description() {
+      return this.$store.state.descriptions;
     },
   },
   methods: {

@@ -25,7 +25,6 @@ export default {
       isPlace: false,
     };
   },
-  mounted() {},
   updated() {
     if (this.params.second_id) {
       this.isPlace = true;

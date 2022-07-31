@@ -19,10 +19,6 @@ export default {
       default: null,
     },
   },
-  components: {},
-  mounted() {},
-  computed: {},
-  methods: {},
 };
 </script>
 

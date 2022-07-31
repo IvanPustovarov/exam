@@ -26,9 +26,20 @@ export default {
     };
   },
   mounted() {},
+  updated() {
+    if (this.params.second_id) {
+      this.isPlace = true;
+    }
+    if (this.params.first_id && !this.params.second_id) {
+      this.isPlace = false;
+    }
+  },
   computed: {
     countryId() {
-      return this.$route.params.first_id;
+      return this.params.first_id;
+    },
+    params() {
+      return this.$route.params;
     },
     country() {
       return this.$store.state.countries.find(
@@ -43,8 +54,8 @@ export default {
   },
   methods: {
     goToPlace(place) {
-      this.isPlace = !this.isPlace;
-      this.$router.push(`${this.$route.params.first_id}/${place.id}`);
+      this.isPlace = true;
+      this.$router.push(`${this.params.first_id}/${place.id}`);
     },
   },
 };

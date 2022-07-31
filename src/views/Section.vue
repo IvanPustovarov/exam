@@ -52,9 +52,20 @@ export default {
   mounted() {
     this.renderedSvg = this.earthProections[this.sectionId];
   },
+  updated() {
+    if (this.params.first_id) {
+      this.isCountry = true;
+    }
+    if (this.params.id && !this.params.first_id) {
+      this.isCountry = false;
+    }
+  },
   computed: {
+    params() {
+      return this.$route.params;
+    },
     sectionId() {
-      return this.$route.params.id;
+      return this.params.id;
     },
     section() {
       return this.$store.state.sections.find(
@@ -80,8 +91,8 @@ export default {
   },
   methods: {
     goToCountry(value) {
-      this.isCountry = !this.isCountry;
-      this.$router.push(`${this.$route.params.id}/${value.value}`);
+      this.isCountry = true;
+      this.$router.push(`${this.params.id}/${value.value}`);
     },
   },
 };

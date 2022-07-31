@@ -9,9 +9,7 @@
         <img :src="renderedSvg" alt="logo" />
       </div>
     </div>
-    <div :style="{ marginBottom: 1 + 'rem', fontSize: 18 + 'px' }">
-      {{ section.name }}. Страны, города и места:
-    </div>
+    <div class="section">{{ section.name }}. Страны, города и места:</div>
     <div class="countries">
       <div
         v-for="country in countries"
@@ -108,10 +106,17 @@ export default {
     width: 25rem;
   }
 }
+.section {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
 .countries {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  border-radius: 5px;
+  background-color: rgba(100, 117, 184, 0.5);
+  padding: 0.2rem;
   .country {
     display: flex;
     align-items: center;
@@ -120,9 +125,10 @@ export default {
     border-radius: 3px 3px 3px 3px;
     font-size: 18px;
     height: 1.3rem;
-  }
-  .country:hover {
-    background-color: rgb(19, 43, 116);
+
+    &:hover {
+      background-color: rgb(19, 43, 116);
+    }
   }
 }
 </style>

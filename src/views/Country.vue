@@ -2,7 +2,7 @@
   <div class="container" v-if="!isPlace">
     <h1 class="country">{{ country.name }}</h1>
     <div class="places">
-      <PlaceLocalComponent
+      <PlaceComponent
         :place="place"
         v-for="place in places"
         :key="place.id"
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import PlaceLocalComponent from "./PlaceLocal.vue";
+import PlaceComponent from "./Place.vue";
 export default {
   name: "CountryComponent",
   components: {
-    PlaceLocalComponent,
+    PlaceComponent,
   },
   data() {
     return {

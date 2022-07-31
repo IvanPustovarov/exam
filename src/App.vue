@@ -99,6 +99,9 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 img {
   width: 100%;

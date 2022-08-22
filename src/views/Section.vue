@@ -9,7 +9,9 @@
         <img :src="renderedSvg" alt="logo" />
       </div>
     </div>
-    <div class="section">{{ section.name }}. Страны, города и места:</div>
+    <div class="section">
+      <p>{{ section.name }}. Страны, города и места:</p>
+    </div>
     <div class="countries">
       <div
         v-for="country in countries"
@@ -119,6 +121,14 @@ export default {
 .section {
   margin-bottom: 1rem;
   font-size: 18px;
+  display: flex;
+  p {
+    font-size: 24px;
+    font-weight: 500;
+    background-color: rgb(35, 63, 93);
+    padding: 0.4rem;
+    border-radius: 3px;
+  }
 }
 .countries {
   display: flex;

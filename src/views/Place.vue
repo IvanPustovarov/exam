@@ -26,7 +26,7 @@ export default {
 .place {
   cursor: pointer;
   outline: 1px solid white;
-  border-radius: 2px;
+  border-radius: 3px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

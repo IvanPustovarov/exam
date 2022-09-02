@@ -6,34 +6,19 @@
         "{{ place.name }}" находится в стране {{ countryName.name }}.
         {{ place.description }}
       </p>
-      <div class="side-info">
-        <div v-if="place.eastern && place.northern" class="coords">
-          Найти это место можно по координатам
-          <span>{{ place.northern }}</span>
-          св.ш и <span>{{ place.eastern }}</span> юж.д
-        </div>
-        <div>
-          Часовой пояс: <span>{{ place.time }}</span>
-        </div>
-        <div v-if="place.area">
-          Площадь: <span>{{ place.area }}</span>
-        </div>
-        <div v-if="place.language">
-          Язык: <span>{{ place.language }}</span>
-        </div>
-        <div v-if="place.population">
-          Население: <span>{{ place.population }}</span>
-        </div>
+      <div>
+        <CustomSelect :options="options" @input="inputOption($event)" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CustomSelect from "@/components/CustomSelect.vue";
 export default {
   name: "PlaceLocalComponent",
   props: {},
-  components: {},
+  components: { CustomSelect },
   mounted() {},
   computed: {
     placeId() {
@@ -49,8 +34,45 @@ export default {
         (country) => country.value === this.place.country
       );
     },
+    options() {
+      return [
+        {
+          text: `Дополнительная информация`,
+          value: "",
+        },
+        {
+          text:
+            this.place.eastern && this.place.northern
+              ? `${this.place.northern} св.ш, ${this.place.eastern} ю.д`
+              : null,
+          value: "",
+        },
+        {
+          text: this.place.time ? `Часовой пояс ${this.place.time}` : null,
+          value: "",
+        },
+        {
+          text: this.place.area ? `Площадь: ${this.place.area}` : null,
+          value: "",
+        },
+        {
+          text: this.place.language ? `Язык: ${this.place.language}` : null,
+          value: "",
+        },
+        {
+          text: this.place.population
+            ? `Население: ${this.place.population}`
+            : null,
+          value: "",
+        },
+      ];
+    },
   },
-  methods: {},
+  methods: {
+    inputOption(option) {
+      this.selected = option;
+    },
+  },
 };
 </script>
 

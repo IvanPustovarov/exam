@@ -77,7 +77,7 @@ export default createStore({
       Границы Океании условны. Западной границей принято считать остров Новая Гвинея, восточной — остров Пасхи.
       Термин «Океания» впервые употребил географ Конрад Мальт-Брюн.`, }
     ],
-    options: [
+    optionsContinents: [
     { text: 'Евразия', value: 'eurasia' },
     { text: 'Острова и островные государства', value: 'islands' },
     { text: 'Африка', value: 'africa' },
@@ -85,7 +85,7 @@ export default createStore({
     { text: 'Антарктида', value: 'antarctica' },
     { text: 'Южная Америка', value: 'south_america' },
     { text: 'Австралия и океания', value: 'australia' },
-  ], 
+  ],
     countries: [{name: "Финляндия", value: "finland", mainland: "eurasia"}, {name: "Прибалтика", value: "baltic-states", mainland: "eurasia"}, {name: "Дания", value: "denmark", mainland: "eurasia"}, 
     {name: "Норвегия", value: "norway", mainland: "eurasia"}, {name: "Швеция", value: "sweden", mainland: "eurasia"}, 
     {name: "Австрия", value: "austria", mainland: "eurasia"}, {name: "Бавария", value: "bavaria", mainland: "eurasia"}, {name: "Берлин", value: "berlin", mainland: "eurasia"}, 

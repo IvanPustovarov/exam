@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     options() {
-      return this.$store.state.options;
+      return this.$store.state.optionsContinents;
     },
   },
 };
